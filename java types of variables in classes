@@ -1,0 +1,68 @@
+package co.vinod.entity;
+public class Product{
+  
+  final private int id;
+  private String name;
+  private double price;
+  
+  public int getId(){
+    return id;
+    
+  }
+  
+  public void setId(int id){
+    this.id=id;
+  }
+  
+  public String getName(){
+    return name;
+    
+  }
+  
+  public void setName(String name){
+    this.name=name;
+  }
+  
+  public double getPrice(){
+    return price;
+    
+  }
+  
+  public void setPrice(double price){
+    this.price=price;
+  }
+  
+  public static void print(Product p1){
+    System.out.println("Id = "+ p1.id);
+    System.out.println("Name = "+ p1.name);
+    System.out.println("Product = "+ p1.product);
+  }
+  
+  
+  
+  
+}
+
+// for the above program has to be imported for this progarm
+
+package co.vinod;
+import co.vinod.entity.Product;
+
+public class Product01{
+  public static void main(String[] args){
+    Product p1;
+    p1=new Product(19);
+    
+    p1.setName("optical mouse");
+    p1.setPrice(5.9);
+    
+    Product p2 = new Product();
+    p2.setName("mobile phone");
+    p2.setPrice(6.9);
+    
+    Product.print(p1);
+    Product.print(p2);
+    
+    
+  }
+}
