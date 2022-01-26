@@ -1,0 +1,95 @@
+package co.vinod.entity;
+
+public class Product{
+  
+  private int id;
+  private String name;
+  private double price;
+  
+  public Product(){
+    
+  }
+  
+  public int getId(){
+    return id;
+    
+  }
+  
+  public void setId(int id){
+    this.id=id;
+  }
+  
+  public String getName(){
+    return name;
+    }
+  public void setNme(String name){
+    this.name=name;
+  }
+  
+  public double getPrice(){
+    return price;
+  }
+  
+  public void setPrice(double price){
+    this.price=price;
+  }
+  
+  public void print(){
+    System.out.println("id = "+id);
+    System.out.println("Name = "+name);
+    System.out.println("price = "+price);
+  }
+  
+}
+
+//class television extends product another pogram which we import for main program
+
+package co.vinod.entity;
+public class Television extends product{
+  private String screentype;
+  private screensize;
+  
+  public Television(){
+    
+  }
+  public String getScreentype(){
+    return screentype;
+  }
+  
+  public void setScreentype(String screentype){
+    this.screentype=screentype;
+  }
+  
+  public int getScrensize(){
+    reeturn screensize;
+  }
+  
+  public void setScreensize(int screensize){
+    this.screensize = screensize;
+  }
+  
+  public void print(){
+    super.print();
+    System.out.println("screen size = "+screensize);
+    System.out.println("screen type = "+screentype);
+}
+
+//actual progarm
+
+package co.vinod;
+import co.vinod.entity.Television;
+
+public class Program01{
+  
+  pulbic static void main(String[] args){
+    
+    Television tv1= new Television();
+    tv1.setId()
+    tv1.setName("vivo");
+    tv1.setPrice(50000.0);
+    tv1.setScrentype("led");
+    tv1.setScreensize(20)
+    
+    tv1.print()
+  }
+}
