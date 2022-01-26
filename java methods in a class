@@ -1,0 +1,65 @@
+package co.vinod.entity;
+public class Product{
+  
+  private int id;
+  private String name;
+  private double product;
+  
+  public void init(int id, String name, double price){
+    if(id<0){
+      threw new RuntimeException("invalid id");
+    }
+    
+    if(price<=0){
+      threw new RuntimeException("invalid price");
+    }
+    
+    if(name==null || name.trim().length()==0){
+      threw new RuntimeException("empty name not allowed");
+    }
+    
+    this.id=id;
+    this.name= name;
+    this.price=price;
+  }
+  
+  public void print(){
+    System.out.println("id = "+id);
+    System.out.println("name = "+name);
+    System.out.println("price = "+price);
+    System.out.println();
+  }
+  public void init(int id, String name){
+    init(id,name,1.0);
+    
+  }
+}
+
+//the above program have to be imported for below program
+
+package co.vinod;
+import co.vinod.entity.product;
+
+public class progarm01{
+  public static void main(String[] args){
+    Product p1;
+    p1 = new product();
+    
+    p1.init(12,"optical mouse", 5.9);
+    p1.print();
+    Product p2 = new product();
+    p2.init(13,"neelu");
+    p2.print();
+  }
+}
+  
+  
+output:
+id = 12
+name= optical mouse
+price = 5.9
+
+id = 13
+name= neelu
+price = 1.0
+
