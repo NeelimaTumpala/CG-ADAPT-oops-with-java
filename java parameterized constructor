@@ -1,0 +1,85 @@
+package co.vinod.entity;
+public class Product{
+  
+  private int id;
+  private string name;
+  private double price;
+  
+  public Product(){
+    
+  }
+  
+  public Product(int id, String name){
+    super();
+    this.id=id;
+    this.name=name;
+  }
+  
+  public Product(String name, int id){
+    super();
+    this.id=id;
+    this.name=name;
+  }
+  
+  
+  //overloaded constructor
+  public Product(int id, String name, double price){
+    this.id=id;
+    this.name=name;
+    this.price=price;
+  }
+  
+  public int getId(){
+    return id;
+  }
+  
+  public void setId(int id){
+    this.id=id;
+  }
+  
+  public String getName(){
+    return name;
+  }
+  
+  public void setName(String name){
+    this.name=name;
+  }
+  
+  public double getPrice(){
+    return price;
+  }
+  
+  public void setPrice(double price){
+    this.price=price;
+  }
+  //Override
+  public String toString(){
+    return String.format("product [id = %s, num=%s, price=%s]", id, name, price);
+    
+  }
+  
+  
+  //the above code has to be imported for this
+  
+  package co.vinod;
+  
+  import co.vinodentity.Product;
+  
+  public class Program01{
+    public static void main(String[] args){
+      Product p1 = new Product();
+      
+      p1.setId(1);
+      p1.setName("Chai");
+      p1.setPrice(18.9)
+      
+      Product p2=new Product(2, "chang", 22.4);
+      Product p3 = new product(3, "Baby Syrup");
+      Product p4 = new product(" Syrup", 4);
+      
+      System.out.println(p1);
+      System.out.println(p2);
+      System.out.println(p3);
+      System.out.println(p4);
+    }
+  }
