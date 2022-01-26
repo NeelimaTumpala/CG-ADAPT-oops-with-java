@@ -1,0 +1,73 @@
+package co.vinod.entity;
+public class Person{
+  private String firstname;
+  private String lastname;
+  private String city;
+  
+  
+  
+  public Person(){
+    
+  }
+    
+    
+    public Person(String firstname){
+      this(firstname,"","Bangalore")
+    }
+    
+    public Person(String firstname, String lastname, string city){
+      this.firstname = firstname;
+      this.lastname = lastname;
+      this.city=city;
+    }
+    
+    public String getFirstName(){
+      return firstname;
+      
+    }
+    public void setFirstName(String firstname){
+      this.firstname=firstname;
+    }
+    
+    public String getLastName(){
+      return lastname;
+      
+    }
+    public void setLastName(String lastname){
+      this.lastname=lastnanme;
+    }
+     
+    public String getCity(){
+      return city;
+      
+    }
+    public void setCity(String city){
+      this.city=city;
+    }
+    
+    //Override
+    public String testString(){
+      return String.format("Person [%s %s, %s]",firstname, lastname, city);
+    }
+  }
+
+
+// the above progarm has been created as a package
+package co.vinod;
+
+
+public class progarm01{
+  public static void main(String[] args){
+    person p1 = new person();
+    p1.setFirstName("vinod");
+    p1.setLastName("kumar");
+    p1.setCity("bangalore");
+    
+    System.out.println(p1)
+  }
+}
+  
+  
+output:
+
+person[vinod kumar, bengalore]
