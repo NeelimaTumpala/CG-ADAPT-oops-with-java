@@ -1,0 +1,30 @@
+package co.vinod.entity;
+public class Product{
+  
+  private int id;
+  private string name;
+  private double price;
+  public Product(int id){
+    this.id=id;
+    name="unknown product";
+    price=5.0;
+  }
+  //Override
+  public String toString(){
+    return String.format("product [id = %s, num=%s, price=%s]", id, name, price);
+    
+  }
+  
+  
+  //the above code has to be imported for this
+  
+  package co.vinod;
+  
+  import co.vinodentity.Product;
+  
+  public class Program01{
+    public static void main(String[] args){
+      Product p1 = new Product();
+      System.out.println(p1);
+    }
+  }
