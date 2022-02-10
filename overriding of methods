@@ -1,0 +1,47 @@
+//circle.java
+
+package co.vinod.entity;
+public class Circle extends Shape{
+  
+  private double radius;
+  
+  public Circle(double radius){
+    this.radius = radius;
+  }
+  @Override
+  public void info(){
+    System.out.println("class circle by vinod.");
+  }
+  
+  @Override
+  public void printArea(){
+    System.out.println("area circle by vinod."+Math.PI*raius*radius);
+  }
+}
+
+//shape.java
+
+package co.vinod.entity;
+package class Shape{
+  public void info(){
+    System.out.println("No information available");
+  }
+  public void printArea(){
+    System.out.println("cant print the area of this shape.");
+  }
+}
+
+//the above programs have to be inherited for below program
+
+package co.vinod;
+
+import co.vinod.entity.Circle;
+public class Program01{
+  public static void main(String[] args){
+    
+    Circle c1 = new Circle();
+    c1.printArea();
+    c1.info();
+    
+  }
+}
