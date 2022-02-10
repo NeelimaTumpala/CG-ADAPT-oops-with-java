@@ -1,0 +1,109 @@
+//manager.java
+
+package co.vinod.entity;
+
+public class Manager extends Employee{
+  private String projectName;
+  private int numberofResources;
+  
+  public Manager(){
+    
+  }
+  
+  public String getProjectName(){
+    return projectName;
+  }
+  
+  public void setProjectName(String projectName){
+    this.projectName = projectName;
+  }
+  
+  public String getNumberofResources(){
+    return numberofResources;
+  }
+  
+  public void setNumberofResources(String numberofResources){
+    this.numberofResources = numberofResources;
+  }
+}
+
+//employee.java
+
+package co.vinod.entity;
+
+public class Employee extends Person{
+  private int id;
+  private double salary;
+  
+  public Employee(){
+    
+  }
+  
+  public String getId(){
+    return id;
+  }
+  
+  public void setId(String id){
+    this.id = id;
+  }
+  
+  public String getSalary(){
+    return salary;
+  }
+  
+  public void setSalary(String salary){
+    this.salary = salary;
+  }
+  
+}
+
+
+
+
+//person.java
+package co.vinod.entity;
+
+public class Person{
+  private String name;
+  private String city;
+  
+  public Person(){
+    
+  }
+  
+  public String getName(){
+    return name;
+  }
+  
+  public void setName(String name){
+    this.name = name;
+  }
+  
+  public String getCity(){
+    return city;
+  }
+  
+  public void setCity(String city){
+    this.city = city;
+  }
+}
+
+
+//the above program has to be inherited for below porgram
+
+package co.vinod;
+
+public class Program01{
+  
+  public static void main(String[] args){
+    
+    Manager m1 = new Manager();
+    
+    m1.setId(1290);
+    m1.setName("Jhon Doe");
+    m1.setCity("Dhone");
+    m1.setSalary(3400.0);
+    m1.setProjectName("ACNE");
+    m1.setNumberofResources(27);
+  }
+}
