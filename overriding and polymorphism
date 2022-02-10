@@ -1,0 +1,114 @@
+//triangle.java
+package co.vinod.entity;
+
+public class Triangle extends Shape{
+  private double base;
+  private double height;
+  
+  public Triangle(){
+    
+  }
+  public Triangle(double base, double height){
+    this.base = base;
+    this.height = height;
+  }
+  
+  public double getBase(){
+    return base;
+  }
+  
+  public void setBase(double base){
+    this.base = base;
+  }
+  
+  public double getHeight(){
+    return height;
+  }
+  
+  public void setHeight(double height){
+    this.height = height;
+  }
+  
+  @Override
+  public void info(){
+    System.out.printf("object of triangle with base = %s and height = %s\n",base,height);
+  }
+  
+  @Override
+  public void printArea(){
+    System.out.printf("Area of triangle is %s sq.units\n",0.5*base*height);
+  }
+}
+
+
+//circle.java
+
+package co.vinod.entity;
+public class Circle extends Shape{
+  
+  private double radius;
+  public Circle(){
+    
+  }
+  public Circle(double radius){
+    this.radius = radius;
+  }
+  
+  public double getRadius(){
+    return radius;
+  }
+  public void setRadius(double radius){
+    this.radius = radius;
+  }
+  
+  @Override
+  public void printArea(){
+    System.out.pritnln("Area of the circle is"+Math.PI*radius*radius+" sq.units");
+  }
+  
+  @Override
+  public void info(){
+    System.out.pritnln("A Circle object with radius of "+radius+" units");
+  }
+}
+
+//shape.java
+
+package co.vinod.entity;
+
+public class Shape{
+  public void info(){
+    System.out.println("just a shape");
+  }
+  public void printArea(){
+    System.out.println("cant print the area");
+  }
+}
+
+//the above programs have to be inherited for below program
+
+package co.vinod;
+
+import co.vinod.entity.Circle;
+import co.vinod.entity.Shape;
+import co.vinod.entity.Triangle;
+
+public class Program01{
+  public static void main(String[] args){
+    Shape s1;
+    
+    s1=new Shape();
+    s1.info();
+    s1.printArea();
+    
+    System.out.println();
+    s1=new Circle(12,34);
+    s1.info();
+    s1.printArea();
+    
+    System.out.println();
+    s1=new Triangle(12,34,45,67);
+    s1.info();
+    s1.printArea();
+  }
+}
