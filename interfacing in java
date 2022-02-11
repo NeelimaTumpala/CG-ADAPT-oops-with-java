@@ -1,0 +1,55 @@
+//triangle.java
+
+package co.vinod.entity;
+
+public class Triangle implements Shape{
+  @Override
+  public void printArea(){
+    System.out.println("Printing the area of triangle here...")
+  }
+}
+
+
+//Circle.java
+
+packge co.vinod.entity;
+public class Circle implements Shape{
+  @Override
+  public void printArea(){
+    System.out.println("Printing the area of the circle");
+  }
+  
+  
+}
+
+//shape.java
+
+package co.vinod.entity
+
+public interface shape{
+  
+  void printArea();
+  
+  
+}
+
+//program01.java
+
+package co.vinod;
+
+import co.vinod.entity.Circle;
+import co.vinod.entity.Shape;
+
+public class Progarm01{
+  
+  public sattic void main(String[] args){
+    Shape s1;
+    
+    s1= new Circle();
+    s1.printArea();
+    
+    s1 = new Triangle();
+    s1.printArea();
+    
+  }
+}
