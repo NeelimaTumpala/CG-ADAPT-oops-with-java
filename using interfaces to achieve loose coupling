@@ -1,0 +1,133 @@
+//ProductDaoJdbc
+package co.vinod.dao;
+import co.vinod.entity.Product;
+public class ProductDaoFileImpl implements ProductDao{
+  
+  @Override
+  public Product getProduct(int id){
+    System.out.println("Getting a product from DATABASE TABLE...");
+    return null;
+    
+  }
+  
+  @Override
+  public void saveProduct(Product p){
+    System.out.println("Saving a product to DATABASE TABLE...");
+    
+  }
+  
+  @Override
+  public void updateProduct(Product p){
+    System.out.println("Updating a product to DATABASE TABLE...");
+  }
+  
+  @Override
+  public void deleteProduct(int id){
+    System.out.println("Deleting a product from DATABASE TABLE...");
+    
+  }
+}
+  
+
+//DaoFactory.java
+
+package co.vinod.dao;
+public class DaoFactory{
+  public static ProductDao getProductDao(String type){
+    if(typr.equalsIgnoreCase("file")){
+      return new ProductDaoFileImpl();
+    }
+    else if(type.equalsIgnoreCase("jdbc")){
+      return new ProductDaoJdbcImpl();
+    }
+    return null;
+  }
+}
+
+//progarm02
+
+package co.vinod.programs;
+
+import co.vinod.dao.DaoFactory;
+import co.vinod.dao.ProductDao;
+import co.vinod.entity.Product;
+
+public class Program02{
+  public static void main(String[] args){
+    ProductDao dao;
+    
+    dao = DaoFactory.getProductDao("FILE");//loose coupling
+    dao.getProduct(12);
+    dao.deleteProduct(14);
+    
+    Product p = new Product();
+    dao.saveProduct(p);
+    
+  }
+}
+
+
+
+//product Dao.java
+
+package co.vinod.dao;
+
+import co.vinod.entity.Product;
+
+public interface ProductDao{
+  public Product getProduct(int id);
+  public void saveProduct(Product p);
+  public void updateProduct(Product p);
+  public void deleteProduct(int id);
+}
+
+//productDaoFilelnpl
+
+package co.vinod.dao;
+
+import co.vinod.entity.Product;
+
+public class ProductDaoFileImpl implements ProductDao{
+  
+  @Override
+  public Product getProduct(int id){
+    System.out.println("Getting a product from FILE...");
+    return null;
+    
+  }
+  
+  @Override
+  public void saveProduct(Product p){
+    System.out.println("Saving a product to FILE...");
+    
+  }
+  
+  @Override
+  public void updateProduct(Product p){
+    System.out.println("Updating a product to FILE...");
+  }
+  
+  @Override
+  public void deleteProduct(int id){
+    System.out.println("Deleting a product from file...");
+    
+  }
+}
+
+
+//the above progarms have to be inherited 
+//program01
+package co.vinod.programs;
+
+import co.vinod.dao.ProductDao;
+import co.vinod.dao.ProductDaoFileImpl;
+
+public class Program01{
+  public static void main(String[] args){
+    ProductDao dao;
+    
+    dao  = new ProductDaoFileImpl();  //tight coupling
+    
+  }
+  
+}
