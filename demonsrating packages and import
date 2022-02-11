@@ -1,0 +1,46 @@
+//person.java(used sublime)
+
+package co.vinod.entity;
+public class person {
+  private String firstname;
+  private String lastname;
+  private String city;
+  
+  public person(){
+    
+  }
+  public Person(String firstname,String lastname,String city){
+    this.firstname=firstname;
+    this.lastname=lastname;
+    this.city=city;
+    
+  }
+  public String toString(){
+    reurn firstname+" "+lastname+" ("+city+")";
+  }
+}
+
+//progarm01(used sublime)
+package co.vinod.program;
+
+import co.vinod.entity.Person;
+public class Progarm01{
+  public static void main(String[] args){
+    Person p1;
+    p1=new Person("vinod" , "kumar", "Bemgaluru");
+    System.out.println(p1);
+  }
+}
+
+
+//the above programs have to be imported(uesd eclips)
+package co.vinod.test;
+
+import co.vinod.entity.Person;
+
+pulbic class Program01{
+  public static void main(Sreing[] args){
+    Person p1 =new Person("Shyam", "Sunder","Bengaluru");
+    System.out.println(p1);
+  }
+}
